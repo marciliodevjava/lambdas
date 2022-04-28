@@ -30,6 +30,7 @@ public class Foreach {
 		System.out.println("\nMethod Reference #2");
 		// Function Lambdas function personalizada utilizando o Foreach
 		aprovados.forEach(Foreach:: meuImprimir);
+		
 	}
 	
 	static void meuImprimir(String nome) {
