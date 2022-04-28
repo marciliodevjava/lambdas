@@ -1,6 +1,6 @@
 package lambdas;
 
-public class CauculoTeste2 {
+public class CauculoTeste3 {
 
 	public static void main(String[] args) {
 
