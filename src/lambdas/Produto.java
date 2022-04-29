@@ -17,4 +17,5 @@ public class Produto extends Object {
 		double precoFinal = this.preco * (1 - this.desconto);
 		return "Nome: " + this.nome + " tem o preço R$ " + precoFinal;
 	}
+
 }
