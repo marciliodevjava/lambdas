@@ -19,17 +19,8 @@ public class Threads {
 				}
 			}
 		};
-		
-		Runnable trabalho3 = () -> {
-			for (int i = 1; i <= 100; i++) {
-				System.out.println("Trabalho #3 : " + i);
-				try {
-					Thread.sleep(100);
-				} catch (Exception e) {
 
-				}
-			}
-		};
+		Runnable trabalho3 = Threads :: trabalho3;
 
 		Thread t1 = new Thread(trabalho1);
 		Thread t2 = new Thread(trabalho2);
@@ -38,5 +29,16 @@ public class Threads {
 		t1.start();
 		t2.start();
 		t3.start();
+	}
+
+	static void trabalho3() {
+		for (int i = 1; i <= 100; i++) {
+			System.out.println("Trabalho #3 : " + i);
+			try {
+				Thread.sleep(100);
+			} catch (Exception e) {
+
+			}
+		}
 	}
 }
