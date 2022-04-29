@@ -3,6 +3,7 @@ package lambdas;
 import java.util.Scanner;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 public class OperadorBinario {
 
@@ -21,8 +22,15 @@ public class OperadorBinario {
 		double notaA = Double.parseDouble(nota1);
 		System.out.println("Digite a segunda nota: ");
 		String nota2 = entrada.next().replace(",", ".");
-		double notaB = Double.parseDouble(nota1);
+		double notaB = Double.parseDouble(nota2);
 
 		System.out.println(resultado.apply(notaA, notaB));
+		
+		Function<Double, String> conceito = m -> m >= 7 ? "Aprovado": "REprovado";
+		
+		System.out.println("Resultado: "+ media.andThen(conceito).apply(notaA, notaB));
+		
+		entrada.close();
+		
 	}
 }
