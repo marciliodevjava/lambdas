@@ -17,6 +17,7 @@ public class DesafioAula186 {
 		String preco = precoFinal.andThen(impostoMunicipal).andThen(freteProduto).andThen(arredonda).andThen(formatar).apply(p);
 
 		String resultado = String.format(preco);
+		
 		System.out.println("O preco final é " + resultado);
 	}
 }
